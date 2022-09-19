@@ -4,7 +4,7 @@ import {useRoute} from '@react-navigation/native';
 
 const Detail = () => {
   const params = useRoute<any>().params;
-  const {personId} = params;
+  const {personId, message} = params;
 
   const [listItem, setListItem] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(true);
@@ -35,6 +35,7 @@ const Detail = () => {
             <Text>Phone : {listItem.phone}</Text>
             <Text>Website : {listItem.website}</Text>
           </View>
+          <Text>{message}</Text>
         </View>
       )}
     </View>

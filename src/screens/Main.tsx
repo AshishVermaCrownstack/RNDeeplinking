@@ -4,7 +4,7 @@ import {styles} from '../styles/globalStyles';
 
 const Main = () => {
   const url1 = 'rndeeplinking://app/home';
-  const url2 = 'rndeeplinking://app/detail/1';
+  const url2 = 'rndeeplinking://app/detail/4/comming_from_openUrl_method';
   const url3 = 'rndeeplinking://app/setting';
   return (
     <View style={styles.contatiner}>
@@ -25,7 +25,7 @@ const Main = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.mainBtnStyle}
-        onPress={() => Linking.openURL('https://reactnative.dev/')}>
+        onPress={() => Linking.openURL('https:/google.com')}>
         <Text style={styles.btnText}>Open Public URL</Text>
       </TouchableOpacity>
     </View>

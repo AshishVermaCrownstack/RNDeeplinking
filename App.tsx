@@ -36,12 +36,13 @@ const App = () => {
       screens: {
         Home: 'home',
         Detail: {
-          path: 'detail/:personId',
+          path: 'detail/:personId/:message',
           parse: {
-            personId: (personId: any) => `${personId}`,
+            personId: (v: any) => `${v}`,
+            message: (m: string) => m,
           },
         },
-        Setting: 'setting',
+        // Setting: 'setting',
         Main: 'main',
       },
     },
@@ -50,10 +51,10 @@ const App = () => {
   return (
     <NavigationContainer linking={linking}>
       <Stack.Navigator>
+        <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Setting" component={Setting} />
-        <Stack.Screen name="Main" component={Main} />
       </Stack.Navigator>
     </NavigationContainer>
   );

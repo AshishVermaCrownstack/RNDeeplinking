@@ -42,7 +42,12 @@ const Home = ({navigation}: ScreenNavigationProps) => {
   const renderItem = ({item}: any) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate('Detail', {personId: item.id})}>
+        onPress={() =>
+          navigation.navigate('Detail', {
+            personId: item.id,
+            message: 'coming from navigation',
+          })
+        }>
         <View style={{paddingVertical: 10, paddingHorizontal: 20}}>
           <Text>{item.name}</Text>
         </View>
