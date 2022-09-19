@@ -1,58 +1,35 @@
-import { View, Text, TouchableOpacity, Linking } from 'react-native'
-import React from 'react'
+import {View, Text, TouchableOpacity, Linking} from 'react-native';
+import React from 'react';
+import {styles} from '../styles/globalStyles';
 
 const Main = () => {
-    const url1 = 'rndeeplinking://app/home';
-    const url2 = 'rndeeplinking://app/detail/3';
-    const url3 = 'rndeeplinking://app/setting';
+  const url1 = 'rndeeplinking://app/home';
+  const url2 = 'rndeeplinking://app/detail/1';
+  const url3 = 'rndeeplinking://app/setting';
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={styles.contatiner}>
       <TouchableOpacity
-        style={{
-          backgroundColor: '#007aff',
-          paddingHorizontal: 30,
-          paddingVertical: 5,
-          borderRadius: 5,
-          margin: 5,
-        }}
+        style={styles.mainBtnStyle}
         onPress={() => Linking.openURL(url1)}>
-        <Text style={{fontSize: 20, color: '#fff'}}>Deep Link to Home</Text>
+        <Text style={styles.btnText}>Deep Link to Home</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={{
-          backgroundColor: '#007aff',
-          paddingHorizontal: 30,
-          paddingVertical: 5,
-          borderRadius: 5,
-          margin: 5,
-        }}
+        style={styles.mainBtnStyle}
         onPress={() => Linking.openURL(url2)}>
-        <Text style={{fontSize: 20, color: '#fff'}}>Deep Link to Detail</Text>
+        <Text style={styles.btnText}>Deep Link to Detail</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={{
-          backgroundColor: '#007aff',
-          paddingHorizontal: 30,
-          paddingVertical: 5,
-          borderRadius: 5,
-          margin: 5,
-        }}
+        style={styles.mainBtnStyle}
         onPress={() => Linking.openURL(url3)}>
-        <Text style={{fontSize: 20, color: '#fff'}}>Deep Link to Setting</Text>
+        <Text style={styles.btnText}>Deep Link to Setting</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={{
-          backgroundColor: '#007aff',
-          paddingHorizontal: 30,
-          paddingVertical: 5,
-          borderRadius: 5,
-          margin: 5,
-        }}
+        style={styles.mainBtnStyle}
         onPress={() => Linking.openURL('https://reactnative.dev/')}>
-        <Text style={{fontSize: 20, color: '#fff'}}>Open Public URL</Text>
+        <Text style={styles.btnText}>Open Public URL</Text>
       </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
